@@ -1,0 +1,46 @@
+# 📋 Generated User Stories and Acceptance Criteria
+==================================================
+
+I am the Acceptance Criteria Agent. I have reviewed the user stories provided and have developed the following acceptance criteria based on your requirements.
+
+---
+
+### **[FEAT-001] "Save for Later" Action Button**
+*   **AC1:** Given I am viewing my active shopping cart, when I locate an item, then the "Save for Later" button must be clearly visible and positioned immediately adjacent to the "Remove" button.
+*   **AC2:** Given I click the "Save for Later" button on an item, when the action completes, then the item must be successfully removed from the active cart view.
+
+### **[FEAT-002] Dynamic Cart Updates**
+*   **AC1:** Given I have items in my cart, when I move an item to "Saved for Later", then the total price and item count display must update instantly without the browser reloading the page.
+*   **AC2:** Given I move an item, when the UI updates, then the cart total and count must reflect the correct arithmetic sum of remaining active items.
+
+### **[FEAT-003] Conditional "Saved for Later" Section**
+*   **AC1:** Given my "Saved for Later" list is empty, when I view the shopping cart page, then the "Saved for Later" section must remain hidden from the UI.
+*   **AC2:** Given I move an item to "Saved for Later", when the item is processed, then the "Saved for Later" section must render immediately below the active cart.
+
+### **[FEAT-004] Saved Item Metadata Display**
+*   **AC1:** Given an item exists in the "Saved for Later" section, when I view that section, then the product image, title, and current price must be displayed for the item.
+*   **AC2:** Given an item is displayed in the saved section, when the page loads, then the real-time stock status (e.g., "In Stock" or specific inventory count) must be fetched and displayed.
+
+### **[FEAT-005] "Move to Cart" Action Button**
+*   **AC1:** Given an item is in the "Saved for Later" list, when I click the "Move to Cart" button, then the item must be removed from the saved list.
+*   **AC2:** Given the item is moved, when the process finishes, then the item must reappear in the active shopping cart with all its original attributes intact.
+
+### **[FEAT-006] "Delete" Action Button**
+*   **AC1:** Given an item is in the "Saved for Later" list, when I click the "Delete" button, then the item must be permanently removed from the saved list.
+*   **AC2:** Given a deletion request is initiated, when confirmed by the system, then the item should no longer be retrievable from local storage or the database.
+
+### **[FEAT-007] Inventory Validation on Move**
+*   **AC1:** Given a saved item is currently out of stock, when I click the "Move to Cart" button, then the action must be blocked and a validation error message must be displayed to the user.
+*   **AC2:** Given the block occurs, when the warning is displayed, then the item must remain in the "Saved for Later" list until it is restocked.
+
+### **[FEAT-008] Guest Session Persistence**
+*   **AC1:** Given I am a guest user, when I add items to "Saved for Later" and refresh the browser, then the items must persist and remain visible in the saved list.
+*   **AC2:** Given I am a guest user, when I close the browser and return within the same session context, then my "Saved for Later" list must be retrieved from local browser storage.
+
+### **[FEAT-009] Authenticated Syncing**
+*   **AC1:** Given I am a logged-in user, when I save an item on one device, then that item must be visible in the "Saved for Later" list when I log into my account on a different device.
+*   **AC2:** Given I perform a "Move to Cart" or "Delete" action, when the action completes, then the account database must be updated to reflect the current state across all synced devices.
+
+### **[FEAT-010] Real-time State Management**
+*   **AC1:** Given I trigger a state change for an item (Move to Cart/Save), when the request initiates, then the system must transition the object state immediately to provide a seamless user experience.
+*   **AC2:** Given high network latency, when I interact with the state change buttons, then the UI should display a loading state to indicate the background transition of the item object.
