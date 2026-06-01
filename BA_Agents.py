@@ -25,7 +25,7 @@
    },
    "outputs": [],
    "source": [
-    "llm_config = {\"model\": \"gemini-3.1-flash-lite\",\"api_key\":\"",\"api_type\":\"google\"}"
+    "llm_config = {\"model\": \"gemini-3.1-flash-lite\",\"api_key\":\"\",\"api_type\":\"google\"}"
    ]
   },
   {
